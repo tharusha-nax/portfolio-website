@@ -20,7 +20,6 @@
   color: white;
   padding: 0 8.5%;
   position: relative;
-  z-index: -2;
 }
 
 nav {
@@ -204,7 +203,7 @@ nav ul li:hover {
   position: absolute;
   right: 10%;
   bottom: 0;
-  z-index: -1;
+  z-index: 0;
 }
 
 .text-box h1 span {
