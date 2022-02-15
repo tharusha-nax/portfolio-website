@@ -5,13 +5,12 @@
   font-family: "poppins", sans-serif;
 }
 
-#preloader{
-    background: #222 url(images/preloader.gif) no-repeat center;
-    background-size: 40%;
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    z-index: 100;
+#preloader {
+  background: #222 url(images/preloader.gif) no-repeat center;
+  background-size: 40%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
 }
 
 .header {
@@ -21,6 +20,7 @@
   color: white;
   padding: 0 8.5%;
   position: relative;
+  z-index: -2;
 }
 
 nav {
@@ -31,11 +31,7 @@ nav {
   padding: 30px 0 10px;
   transition: all 300ms ease-in;
   user-select: none;
-}
-
-.menu-icon {
-  cursor: pointer;
-  width: 170px;
+  z-index: 0;
 }
 
 .logo {
@@ -139,7 +135,7 @@ nav ul li:hover {
   user-select: none;
 }
 
-.fa-user:hover{
+.fa-user:hover {
   background: linear-gradient(4deg, rgb(230, 97, 148) 0%, rgb(199, 4, 62) 100%);
   background-clip: unset;
   -webkit-background-clip: text;
@@ -197,20 +193,74 @@ nav ul li:hover {
   border-width: 5px;
   border-style: solid;
   border-color: transparent transparent rgba(105, 1, 69, 1) transparent;
-
 }
+
+/* .tooltip i:before{
+
+} */
 
 .avatar {
   width: 540px;
   position: absolute;
   right: 10%;
   bottom: 0;
-  z-index: 0;
+  z-index: -1;
 }
 
-.text-box h1 span{
+.text-box h1 span {
   background: linear-gradient(4deg, rgb(230, 97, 148) 0%, rgb(199, 4, 62) 100%);
   background-clip: unset;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Responsiveness */
+
+@media (min-height: 700px) {
+  .avatar {
+    width: 650px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+  }
+
+  .text-box {
+    margin-top: 20%;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 32px;
+  }
+}
+
+@media (max-height: 620px) {
+  .avatar {
+    width: 450px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    z-index: 0;
+  }
+
+  .text-box {
+    margin-top: 10%;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 25px;
+  }
+}
+
+@media (max-height: 730px) {
+  .avatar {
+    width: 450px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+  }
+
+  .text-box {
+    margin-top: 10%;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 25px;
+  }
 }
