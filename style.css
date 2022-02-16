@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -23,6 +25,7 @@
   position: relative;
 }
 
+/* Navigation Bar */
 nav {
   display: flex;
   width: 100%;
@@ -33,6 +36,8 @@ nav {
   user-select: none;
 }
 
+
+/* Logo */
 .logo {
   cursor: pointer;
 }
@@ -43,6 +48,15 @@ nav {
   text-decoration: none;
   color: white;
   transition: all 1s ease-in;
+  font-family: "Rye", cursive;
+  font-weight: normal;
+  text-shadow: 0 0 10px #ff64e5,
+  0 0 20px #ff1fbf,
+  0 0 40px #9500ff,
+  0 0 80px #ff00d4,
+  0 0 120px #ff00d4,
+  0 0 200px #ff7ff0,
+  0 0 500px #ff0000;
 }
 
 nav ul {
@@ -160,7 +174,6 @@ nav ul li:hover {
 .tooltip {
   position: relative;
   display: inline-block;
-  z-index: 0;
 }
 
 .tooltip:before {
@@ -396,7 +409,6 @@ nav ul li:hover {
     position: absolute;
     right: 10%;
     bottom: 0;
-    z-index: 0;
   }
 }
 
