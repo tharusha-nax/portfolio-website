@@ -164,6 +164,7 @@ nav ul li:hover {
   border-radius: 50%;
   user-select: none;
   display: none;
+  visibility: hidden;
   transition: all 1s ease-in;
 }
 
@@ -583,6 +584,7 @@ nav ul li:hover {
 @media (max-width: 1000px) {
   .fa-bars{
     display: flex;
+    visibility: visible;
   }
 
   .fa-user{
