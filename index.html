@@ -10,17 +10,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script
-      src="https://kit.fontawesome.com/6cc17d086e.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/6cc17d086e.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        $("img").bind("contextmenu", function(){
+          return false;
+        })
+      })
+    </script>
   </head>
   <body>
     <div id="preloader"></div>
 
     <div class="header">
       <nav>
-        <h1 class="logo"><a data-text="Tharusha Nirmal." href="">Tharusha Nirmal.</a></h1>
+        <h1 class="logo"><a data-text="Tharusha Nirmal." href=".">Tharusha Nirmal.</a></h1>
         <ul>
           <li><a href="">HOME</a></li>
           <li><a href="">ABOUT ME</a></li>
@@ -28,7 +34,10 @@
           <li><a href="">SERVICES</a></li>
         </ul>
         <i class="fa-solid fa-user"></i>
+        <i class="fas fa-bars"></i>
       </nav>
+
+      <img src="images/user.png" class="avatar" />
 
       <div class="text-box">
         <h1>I'm <span class="auto-input"></span></h1>
@@ -36,20 +45,20 @@
           You can reach out to me if you need any help<br />
           in making a website for you or your business
         </p>
-        <a class="tooltip" href="">
+        <a class="tooltip" href="https://github.com/tharusha-nax" target="_blank">
           <i class="fa fa-github"></i>
-          <div class="tooltip-text">Me on Github</div>
+          <div class="tooltip-text">Github</div>
         </a>
-        <a class="tooltip" href="">
+        <a class="tooltip">
           <i class="fa fa-twitter"></i>
-          <div class="tooltip-text">Me on Twitter</div>
+          <div class="tooltip-text">Twitter</div>
         </a>
-        <a class="tooltip" href="">
+        <a class="tooltip"">
           <i class="fa fa-facebook"></i>
-          <span class="tooltip-text">Me on Facebook</span>
+          <span class="tooltip-text">Facebook</span>
         </a>
       </div>
-      <img src="images/user.png" class="avatar" />
+      <!-- <img src="images/user.png" class="avatar" /> -->
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

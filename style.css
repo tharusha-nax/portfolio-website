@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
 
 * {
   margin: 0;
@@ -23,6 +23,7 @@
   color: white;
   padding: 0 8.5%;
   position: relative;
+  z-index: 0;
 }
 
 /* Navigation Bar */
@@ -35,7 +36,6 @@ nav {
   transition: all 300ms ease-in;
   user-select: none;
 }
-
 
 /* Logo */
 .logo {
@@ -50,13 +50,8 @@ nav {
   transition: all 1s ease-in;
   font-family: "Rye", cursive;
   font-weight: normal;
-  text-shadow: 0 0 10px #ff64e5,
-  0 0 20px #ff1fbf,
-  0 0 40px #9500ff,
-  0 0 80px #ff00d4,
-  0 0 120px #ff00d4,
-  0 0 200px #ff7ff0,
-  0 0 500px #ff0000;
+  text-shadow: 0 0 10px #ff64e5, 0 0 20px #ff1fbf, 0 0 40px #9500ff,
+    0 0 80px #ff00d4, 0 0 120px #ff00d4, 0 0 200px #ff7ff0, 0 0 500px #ff0000;
 }
 
 nav ul {
@@ -116,6 +111,8 @@ nav ul li:hover {
   letter-spacing: 1px;
   transition: all 1s ease-in;
   line-height: 26px;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .text-box h1 {
@@ -155,6 +152,18 @@ nav ul li:hover {
   user-select: none;
 }
 
+.fa-bars {
+  margin: 15px 2px;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  user-select: none;
+  display: none;
+}
+
 .fa-user:hover {
   background: linear-gradient(
     360deg,
@@ -167,6 +176,19 @@ nav ul li:hover {
   transition: all 1s ease-in;
 }
 
+.fa-bars:hover {
+  background: linear-gradient(
+    360deg,
+    rgb(230, 97, 148) 0%,
+    rgb(199, 4, 62) 100%
+  );
+  background-clip: unset;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 1s ease-in;
+  cursor: pointer;
+}
+
 .fa:hover {
   transition: all 0.3s ease-in;
 }
@@ -174,6 +196,11 @@ nav ul li:hover {
 .tooltip {
   position: relative;
   display: inline-block;
+  user-select: none;
+}
+
+.tooltip:hover{
+  cursor: pointer;
 }
 
 .tooltip:before {
@@ -222,15 +249,20 @@ nav ul li:hover {
   color: #fff;
   text-align: center;
   padding: 5px 0;
-  border-radius: 6px;
+  border-radius: 5%;
   margin-left: -60px;
   top: 100%;
   left: 50%;
   position: absolute;
+  user-select: none;
 }
 
 .tooltip:hover .tooltip-text {
   visibility: visible;
+}
+
+.tooltip .tooltip-text:hover{
+  visibility: hidden;
 }
 
 .tooltip .tooltip-text::after {
@@ -246,10 +278,13 @@ nav ul li:hover {
 
 .avatar {
   width: 540px;
-  position: absolute;
-  right: 10%;
-  bottom: 0;
-  z-index: 0;
+  position: relative;
+  top: 15%;
+  justify-content: center;
+  text-align: center;
+  float: right;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .text-box h1 span {
@@ -263,18 +298,16 @@ nav ul li:hover {
   -webkit-text-fill-color: transparent;
 }
 
-/* Responsiveness */
+/* Responsiveness - Height */
 
-@media (max-height: 1104px) {
+@media (max-height: 4000px) {
   .avatar {
     width: 800px;
-    position: absolute;
-    right: 5%;
-    bottom: 0;
     transition: all 1s ease-in;
   }
 
   .text-box {
+    margin-top: 20%;
     font-size: 30px;
     letter-spacing: 1px;
     line-height: 35px;
@@ -298,8 +331,8 @@ nav ul li:hover {
   .tooltip .tooltip-text::after {
     bottom: 99%;
     left: 50%;
-    margin-left: -10px;
-    border-width: 20px;
+    margin-left: -5px;
+    border-width: 10px;
   }
 
   .tooltip .tooltip-text {
@@ -307,7 +340,6 @@ nav ul li:hover {
     font-size: 25px;
     width: 200px;
     padding: 10px 0;
-    border-radius: 6px;
     margin-left: -110px;
     top: 100%;
     left: 50%;
@@ -323,26 +355,26 @@ nav ul li:hover {
   }
 }
 
-@media (max-height: 960px) {
+@media (max-height: 965px) {
   .avatar {
     width: 700px;
   }
 }
 
-@media (max-height: 948px) {
+@media (max-height: 928px) {
   .avatar {
     width: 600px;
     transition: all 1s ease-out;
   }
 
   .text-box {
-    font-size: 25px;
+    font-size: 12px;
     letter-spacing: 1px;
     line-height: 30px;
   }
 }
 
-@media (max-height: 928px) {
+@media (max-height: 967px) {
   .fa {
     margin: 20px 10px;
     padding: 10px;
@@ -370,7 +402,7 @@ nav ul li:hover {
 
   .tooltip .tooltip-text {
     margin-top: 10px;
-    font-size: 10px;
+    font-size: 12px;
     visibility: hidden;
     width: 120px;
     background: linear-gradient(
@@ -381,7 +413,6 @@ nav ul li:hover {
     color: #fff;
     text-align: center;
     padding: 5px 0;
-    border-radius: 6px;
     margin-left: -60px;
     top: 100%;
     left: 50%;
@@ -406,17 +437,12 @@ nav ul li:hover {
 
   .avatar {
     width: 540px;
-    position: absolute;
-    right: 10%;
-    bottom: 0;
   }
 }
 
-@media (max-height: 652px) {
+@media (max-height: 748px) {
   .avatar {
     width: 400px;
-    right: 8%;
-    bottom: 10%;
   }
 
   nav ul li a {
@@ -454,3 +480,69 @@ nav ul li:hover {
     line-height: 80px;
   }
 }
+
+/* Responsiveness - Width */
+
+@media (max-width: 1750px) {
+  .avatar {
+    width: 500px;
+    top: 10%;
+  }
+
+  .text-box {
+    margin-top: 15%;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: all 1s ease-in;
+    line-height: 26px;
+  }
+
+  .fa {
+    margin: 20px 10px;
+    padding: 10px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .tooltip:before {
+    top: 27%;
+    left: 18%;
+    height: 35px;
+    width: 35px;
+  }
+
+  .tooltip .tooltip-text {
+    margin-top: 10px;
+    font-size: 12px;
+    visibility: hidden;
+    width: 120px;
+    background: linear-gradient(
+      360deg,
+      rgb(230, 97, 148) 0%,
+      rgb(105, 1, 32) 100%
+    );
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    margin-left: -60px;
+    top: 100%;
+    left: 50%;
+    position: absolute;
+  }
+
+  .text-box h1 {
+    line-height: 80px;
+  }
+
+  .logo a {
+    font-size: 15px;
+  }
+
+  nav ul li a {
+    font-size: 12px;
+  }
+}
+/* 
+@media (max-width: 1070px) {
+  
+} */
