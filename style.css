@@ -154,7 +154,8 @@ nav ul li:hover {
   transition: all 1s ease-out;
 }
 
-.fa-bars {
+label {
+  width: 40px;
   margin: 15px 2px;
   color: white;
   padding: 10px;
@@ -163,9 +164,12 @@ nav ul li:hover {
   text-decoration: none;
   border-radius: 50%;
   user-select: none;
-  display: none;
-  visibility: hidden;
   transition: all 1s ease-in;
+  display: none;
+}
+
+#toggle {
+  display: none;
 }
 
 .fa-user:hover {
@@ -180,7 +184,7 @@ nav ul li:hover {
   transition: all 1s ease-in;
 }
 
-.fa-bars:hover {
+label:hover {
   background: linear-gradient(
     360deg,
     rgb(230, 97, 148) 0%,
@@ -548,6 +552,12 @@ nav ul li:hover {
 }
 
 @media (max-width: 1105px) {
+  .text-box h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1000px) {
   .avatar {
     margin-right: -400%;
   }
@@ -574,20 +584,22 @@ nav ul li:hover {
   }
 
   .tooltip:before {
-    top: 27%;
-    left: 18%;
+    top: 25%;
+    left: 16%;
     height: 40px;
     width: 40px;
   }
-}
-
-@media (max-width: 1000px) {
-  .fa-bars {
-    display: flex;
+  label {
+    display: block;
     visibility: visible;
   }
 
   .fa-user {
+    display: none;
+    visibility: hidden;
+  }
+
+  ul li a {
     display: none;
   }
 }
