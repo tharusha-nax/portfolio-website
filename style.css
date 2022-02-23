@@ -203,7 +203,7 @@ nav ul li:hover {
   user-select: none;
 }
 
-.tooltip:hover{
+.tooltip:hover {
   cursor: pointer;
 }
 
@@ -265,7 +265,7 @@ nav ul li:hover {
   visibility: visible;
 }
 
-.tooltip .tooltip-text:hover{
+.tooltip .tooltip-text:hover {
   visibility: hidden;
 }
 
@@ -548,21 +548,21 @@ nav ul li:hover {
 }
 
 @media (max-width: 1105px) {
-  .avatar{
+  .avatar {
     margin-right: -400%;
   }
 
-  .text-box{
+  .text-box {
     justify-content: center;
     margin-left: 20%;
     font-size: 20px;
   }
 
-  .text-box h1{
+  .text-box h1 {
     font-size: 50px;
   }
 
-  .header{
+  .header {
     background: linear-gradient(221deg, rgb(0, 0, 0) 0%, rgb(44, 1, 104) 100%);
   }
 
@@ -582,12 +582,12 @@ nav ul li:hover {
 }
 
 @media (max-width: 1000px) {
-  .fa-bars{
+  .fa-bars {
     display: flex;
     visibility: visible;
   }
 
-  .fa-user{
+  .fa-user {
     display: none;
   }
 }
