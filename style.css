@@ -21,26 +21,16 @@
   height: 100vh;
   background: black;
   color: white;
-  padding: 0 8.5%;
+  padding: 2% 5%;
   position: relative;
   z-index: 0;
   overflow: hidden;
 }
 
-/* Navigation Bar */
-nav {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 30px 0 10px;
-  transition: all 300ms ease-in;
-  user-select: none;
-}
-
 /* Logo */
 .logo {
   cursor: pointer;
+  margin: 0;
 }
 
 .logo a {
@@ -53,6 +43,17 @@ nav {
   font-weight: normal;
   text-shadow: 0 0 10px #ff64e5, 0 0 20px #ff1fbf, 0 0 40px #9500ff,
     0 0 80px #ff00d4, 0 0 120px #ff00d4, 0 0 200px #ff7ff0, 0 0 500px #ff0000;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px 0 10px;
+  transition: all 300ms ease-in;
+  user-select: none;
 }
 
 nav ul {
@@ -155,17 +156,15 @@ nav ul li:hover {
 }
 
 label {
-  width: 40px;
-  margin: 15px 2px;
-  color: white;
-  padding: 10px;
-  font-size: 20px;
+  position: relative;
+  height: 5px;
+  font-size: 30px;
   text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
   user-select: none;
   transition: all 1s ease-in;
   display: none;
+  float: right;
+  margin-left: 58vw;
 }
 
 #toggle {
@@ -570,6 +569,7 @@ label:hover {
 
   .text-box h1 {
     font-size: 50px;
+    z-index: -1;
   }
 
   .header {
@@ -581,6 +581,7 @@ label:hover {
     padding: 10px;
     width: 40px;
     height: 40px;
+    z-index: -5;
   }
 
   .tooltip:before {
@@ -589,9 +590,10 @@ label:hover {
     height: 40px;
     width: 40px;
   }
+
   label {
     display: block;
-    visibility: visible;
+    right: 8%;
   }
 
   .fa-user {
@@ -599,7 +601,34 @@ label:hover {
     visibility: hidden;
   }
 
-  ul li a {
-    display: none;
+  nav {
+    margin-top: -15px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    transition: all 300ms ease-in;
+    user-select: none;
+  }
+
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #030e64;
+    top: 80px;
+    left: 0;
+    text-align: center;
+    z-index: 2;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+  }
+
+  .logo {
+    margin-top: 3%;
+    position: fixed;
   }
 }
