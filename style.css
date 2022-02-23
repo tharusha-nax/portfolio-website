@@ -167,24 +167,16 @@ label {
   float: right;
 }
 
+input[type="checkbox"]:checked + nav ul {
+    left: 0;
+  }
+
 label:hover {
   cursor: pointer;
 }
 
 #toggle {
-  position: fixed;
-  right: 2%;
-  height: 5px;
-  font-size: 30px;
-  text-align: right;
-  user-select: none;
-  transition: all 1s ease-in;
   display: none;
-  float: right;
-}
-
-#toggle:checked ~ ul {
-  left: 0;
 }
 
 .fa-user:hover {
@@ -289,12 +281,13 @@ label:hover {
 .avatar {
   width: 540px;
   position: relative;
-  top: 15%;
+  top: 10%;
   text-align: center;
   float: right;
   user-select: none;
   -webkit-user-drag: none;
   overflow: hidden;
+  transition: all 1.5s ease-in-out;
 }
 
 .text-box h1 span {
@@ -313,7 +306,6 @@ label:hover {
 @media (max-height: 4000px) {
   .avatar {
     width: 800px;
-    transition: all 1s ease-in;
   }
 
   .text-box {
@@ -561,7 +553,7 @@ label:hover {
 
 @media (max-width: 1000px) {
   .avatar {
-    margin-right: -200%;
+    margin-right: -500%;
   }
 
   .text-box {
@@ -603,32 +595,6 @@ label:hover {
     visibility: hidden;
   }
 
-  nav {
-    margin-top: -15px;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    padding: 10px;
-    transition: all 300ms ease-in;
-    user-select: none;
-  }
-
-  nav ul {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #030e64;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    z-index: 20;
-  }
-
-  nav ul li {
-    display: block;
-    margin: 50px 0;
-  }
-
   .logo {
     margin-top: 3%;
     position: fixed;
@@ -642,6 +608,33 @@ label:hover {
   .tooltip:hover .tooltip-text {
     visibility: hidden;
   }
+
+  /* Navigation Bar */
+    nav {
+    margin-top: -15px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.3s ease-in;
+    user-select: none;
+  }
+
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #030e64;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    z-index: 10;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+  }
 }
 
 @media (max-width: 780px) {
@@ -650,7 +643,7 @@ label:hover {
     font-size: 15px;
   }
 
-  .text-box h1{
+  .text-box h1 {
     font-size: 30px;
   }
 }
@@ -662,7 +655,7 @@ label:hover {
     font-size: 15px;
   }
 
-  .text-box h1{
+  .text-box h1 {
     font-size: 30px;
   }
 }
@@ -674,7 +667,7 @@ label:hover {
     font-size: 10px;
   }
 
-  .text-box h1{
+  .text-box h1 {
     font-size: 20px;
   }
 
