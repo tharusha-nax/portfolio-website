@@ -156,19 +156,35 @@ nav ul li:hover {
 }
 
 label {
-  position: relative;
+  position: fixed;
+  right: 2%;
   height: 5px;
   font-size: 30px;
-  text-align: center;
+  text-align: right;
   user-select: none;
   transition: all 1s ease-in;
   display: none;
   float: right;
-  margin-left: 58vw;
+}
+
+label:hover {
+  cursor: pointer;
 }
 
 #toggle {
+  position: fixed;
+  right: 2%;
+  height: 5px;
+  font-size: 30px;
+  text-align: right;
+  user-select: none;
+  transition: all 1s ease-in;
   display: none;
+  float: right;
+}
+
+#toggle:checked ~ ul {
+  left: 0;
 }
 
 .fa-user:hover {
@@ -181,19 +197,6 @@ label {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 1s ease-in;
-}
-
-label:hover {
-  background: linear-gradient(
-    360deg,
-    rgb(230, 97, 148) 0%,
-    rgb(199, 4, 62) 100%
-  );
-  background-clip: unset;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 1s ease-in;
-  cursor: pointer;
 }
 
 .fa:hover {
@@ -558,7 +561,7 @@ label:hover {
 
 @media (max-width: 1000px) {
   .avatar {
-    margin-right: -400%;
+    margin-right: -200%;
   }
 
   .text-box {
@@ -593,7 +596,6 @@ label:hover {
 
   label {
     display: block;
-    right: 8%;
   }
 
   .fa-user {
@@ -617,9 +619,9 @@ label:hover {
     height: 100vh;
     background: #030e64;
     top: 80px;
-    left: 0;
+    left: -100%;
     text-align: center;
-    z-index: 2;
+    z-index: 20;
   }
 
   nav ul li {
@@ -630,5 +632,64 @@ label:hover {
   .logo {
     margin-top: 3%;
     position: fixed;
+  }
+
+  .text-box {
+    margin-top: 20%;
+    font-size: 20px;
+  }
+
+  .tooltip:hover .tooltip-text {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 780px) {
+  .text-box {
+    margin-top: 25%;
+    font-size: 15px;
+  }
+
+  .text-box h1{
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .text-box {
+    margin-left: 10%;
+    margin-top: 40%;
+    font-size: 15px;
+  }
+
+  .text-box h1{
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 440px) {
+  .text-box {
+    margin-left: 5%;
+    margin-top: 40%;
+    font-size: 10px;
+  }
+
+  .text-box h1{
+    font-size: 20px;
+  }
+
+  .fa {
+    margin: 20px 10px;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    z-index: -5;
+  }
+
+  .tooltip:before {
+    top: 34%;
+    left: 25%;
+    height: 20px;
+    width: 20px;
   }
 }
