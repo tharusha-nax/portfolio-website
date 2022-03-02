@@ -10,8 +10,26 @@
   -webkit-user-drag: none;
 }
 
+body {
+  overflow: overlay;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#0097ff, #e700ff);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 /* Preloader */
@@ -903,7 +921,7 @@ label:hover {
     font-size: 30px;
   }
 
-  .heading h2{
+  .heading h2 {
     font-size: 40px;
   }
 }
